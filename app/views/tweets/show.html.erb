@@ -1,0 +1,52 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class = "heading mb-8">Tweet Detail</h1>
+
+<%= render @tweet %>
+
+<%# <%= render "form", {tweet: Tweet.new, replied_to: @tweet }%>
+<%= form_with(model: Tweet.new, url:  tweet_tweets_path(@tweet), method: :post ) do |form| %>
+  <% if Tweet.new.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
+
+      <ul>
+        <% Tweet.new.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_area :body, class: "input__container" %>
+  </div>
+
+<%# 
+  <div>
+    <%= form.label :replied_to_id %>
+  <%# </div>
+  <div>
+    <%= form.text_area :replied_to_id %>
+
+  <div>
+    <%= form.submit "Tweet", class: "button button--primary"%>
+  </div>
+<% end %>
+
+
+<div>
+  <% @replies.each do |reply|%>
+    <div class="tweet-container">
+     <%= render reply %>
+    </div>
+  <% end %>
+</div>
+
+
+<div>
+  <%= link_to "Edit this tweet", edit_tweet_path(@tweet) %> |
+  <%= link_to "Back to tweets", tweets_path %>
+
+  <%= button_to "Destroy this tweet", @tweet, method: :delete %>
+</div>

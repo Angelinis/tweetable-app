@@ -1,0 +1,23 @@
+<div id="<%= dom_id user %>", style="text-align:center; margin-bottom: 20px">
+  <%= image_tag(user.avatar, style:"width: 100px; margin:auto")  %>
+
+  <p>
+    <%= user.name %>
+  </p>
+
+  <p style="color:var(--primary-200)">
+    @<%= user.username %>
+  </p>
+
+
+  <p>
+    Joined on  <%= user.created_at.to_date %>
+  </p>
+
+  <% if user != current_user %>
+   <%= link_to "Edit Profile",    edit_user_path(user)   %>
+  <% else %>
+   <%= link_to "Edit Profile",   edit_user_registration_path  %>
+  <% end %>
+
+</div>

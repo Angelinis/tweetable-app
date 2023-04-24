@@ -1,0 +1,33 @@
+.category-card {
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.category-card__content {
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-card__image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.color-error {
+  color: var(--error-500);
+}

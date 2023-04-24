@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class = "heading mb-8">Profile</h1>
+
+
+<%= render @user %>
+
+<h2 class = "heading--sm mb-8">Tweets</h2>
+
+<% @tweets.each do |tweet| %>
+  <div class="tweet-container">
+    <%= render "tweets/tweet", tweet: tweet %>
+    <div class="flex", style= "justify-content: flex-start">
+    <%= link_to image_tag("Icon(4).svg"),  edit_tweet_path(tweet)  %>
+    <%= link_to image_tag("Icon(3).svg"), tweet_path(tweet), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </div>
+  </div>
+<% end %>
+
+
+<h2 class = "heading--sm mb-8">Likes</h2>
+
+
+<% @likes.each do |tweet| %>
+  <div class="tweet-container">
+    <%= render "tweets/tweet", tweet: tweet %>
+  </div>
+<%end %>
+
+
+<div>
+  <%= link_to "Back to users", users_path %> |
+  <%= link_to "Back to tweets", tweets_path %>
+
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>

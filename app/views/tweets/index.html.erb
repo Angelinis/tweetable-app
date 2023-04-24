@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class = "heading mb-8">Home</h1>
+
+<%= render "form", tweet: Tweet.new %>
+
+<div id="tweets">
+  <% @tweets.each do |tweet| %>
+    <div class="tweet-container">
+    <%= render tweet %>
+    </div>
+  <% end %>
+</div>

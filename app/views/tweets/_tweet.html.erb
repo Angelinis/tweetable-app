@@ -1,0 +1,53 @@
+<div id="<%= dom_id tweet %>" class="mb-4">
+
+  <div class="flex space-between">
+    <%= link_to image_tag(tweet.user.avatar), tweet.user %>
+
+    <h2><%= tweet.user.name %></h2>
+  <div class="flex flex-column">
+
+  <span style="color:var(--primary-200)">@<%= tweet.user.username%></span>
+  <span> 
+  <% if (((Time.zone.now - tweet.created_at)/60.seconds).floor) >= 60 %>
+    <%= ((Time.zone.now - tweet.created_at)/1.hour).floor %> hours ago 
+  <% elsif (((Time.zone.now - tweet.created_at)/60.seconds).floor) < 60 %>
+    <%= ((Time.zone.now - tweet.created_at)/60.seconds).floor %> minutes ago
+  <% end %>
+  </span>
+  </div>
+
+  </div>
+
+  <p>
+    <%= tweet.body %>
+  </p>
+
+
+  <div class="flex", style= "justify-content: flex-end">
+    <div class="flex">
+      <%= link_to image_tag("Icon.svg"), tweet %>
+      <p>
+          <%= tweet.replies_count %>
+      </p>
+    </div>
+
+    <div class="flex">
+
+      <% if current_user.nil? %>
+        <%= link_to image_tag("Icon(1).svg")  %>
+        <%# Error when putting link_to %>
+      <% elsif tweet.likes.find_by(user_id: current_user.id) %>
+        <%= link_to image_tag("Icon(1).svg"),  remove_like_tweet_path(tweet), data:{turbo_method: :delete}  %>
+        <%# Error when putting link_to %>
+      <% else %>
+        <%= link_to image_tag("Icon(5).svg"),  add_like_tweet_path(tweet), data:{turbo_method: :post}   %>
+      <% end %>
+
+      <p>
+        <%= tweet.likes_count %>
+      </p>
+    </div>
+  </div>
+
+
+</div>
