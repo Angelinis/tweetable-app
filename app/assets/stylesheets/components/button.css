@@ -8,6 +8,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.5em 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   cursor: pointer;
   display: flex;
   gap: 0.5em;
@@ -125,4 +127,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-image{
+display: flex;
+justify-content: center;
 }
