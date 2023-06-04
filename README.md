@@ -1,13 +1,50 @@
-# README
+Tweetable app
+========
 
-This README would explains how to get the application up and running.
+What is this?
+-------------
+“Tweetable” is an application similar to twitter that lets the user to create an account, 
+sign up, publish comments or tweets and like tweets or comments. 
 
-Things you may want to cover:
+It is a project based on Ruby on Rails language and it used the concepts of APIs, 
+authentication, authorization, associations, validations, seeds, etc. 
 
-- Ruby version 3.1.2
+![homepage](https://cloud.githubusercontent.com/assets/65323/4512764/26484d88-4b44-11e4-9a79-7ee06d6942e7.png)
 
-- Please make a "BUNDLE INSTALL" in the command line
+[Trailmix]: https://www.trailmix.life/pages/github
 
-- Please make sure to have your server up and running. You can use "SUDO SERVICE POSTGRESQL START"
+Ruby version
+-------------
 
-- Start the rails server using "RAILS S"
+This webpage was coded using Ruby version 3.1.2
+
+Contributions
+-------------
+
+My goal is to keep creating more applications to keep practicing. Please let 
+me know if you have any feedback.
+
+That said, if you find a bug, please do open an issue!
+
+Getting Started
+---------------
+
+After you have cloned this repo, run this setup script to set up your machine
+with the necessary dependencies to run and test this app:
+
+    bundle install
+
+Also make sure that you have a postgresql server running:
+
+    sudo service postgresql start
+
+If you don't have `postgresql`, see [postgresql installation webpage][postgresql]. 
+Finally start the rails database and server using:
+
+    rails db:reset
+    
+    rails s
+
+[postgresql]: https://www.postgresql.org/download/
+
+
