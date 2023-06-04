@@ -9,9 +9,11 @@ sign up, publish comments or tweets and like tweets or comments.
 It is a project based on Ruby on Rails language and it used the concepts of APIs, 
 authentication, authorization, associations, validations, seeds, etc. 
 
-![homepage](https://cloud.githubusercontent.com/assets/65323/4512764/26484d88-4b44-11e4-9a79-7ee06d6942e7.png)
+![homepage](https://raw.githubusercontent.com/Angelinis/tweetable-app/main/app/assets/images/Tweetable_app_1.JPG)
 
-[Trailmix]: https://www.trailmix.life/pages/github
+![details1](https://raw.githubusercontent.com/Angelinis/tweetable-app/main/app/assets/images/Tweetable_app_2.JPG)
+
+![details2](https://raw.githubusercontent.com/Angelinis/tweetable-app/main/app/assets/images/Tweetable_app_3.JPG)
 
 Ruby version
 -------------
