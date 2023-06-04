@@ -20,13 +20,6 @@ Ruby version
 
 This webpage was coded using Ruby version 3.1.2
 
-Contributions
--------------
-
-My goal is to keep creating more applications to keep practicing. Please let 
-me know if you have any feedback.
-
-That said, if you find a bug, please do open an issue!
 
 Getting Started
 ---------------
@@ -49,4 +42,11 @@ Finally start the rails database and server using:
 
 [postgresql]: https://www.postgresql.org/download/
 
+Contributions
+-------------
+
+My goal is to keep creating more applications to keep practicing. Please let 
+me know if you have any feedback.
+
+That said, if you find a bug, please do open an issue!
 
